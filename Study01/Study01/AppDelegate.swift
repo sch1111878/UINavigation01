@@ -18,14 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let sb=UIStoryboard(name: "Main", bundle: nil)
-        let vc=sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let vc=sb.instantiateViewController(withIdentifier: "ViewController")
         let navigationC=UINavigationController(rootViewController: vc)
-        
-        navigationC.navigationBar.shadowImage = UIImage()
-        navigationC.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        
         self.window?.rootViewController=navigationC
-        
         
         return true
     }
